@@ -1,0 +1,35 @@
+{% extends "principal.html" %}
+
+{% block content %}
+
+{% load static %}
+
+
+{% if link %}
+
+
+
+<div style="align-items: center; text-align: center; margin-top: 5%; margin-bottom: 5%;">
+    <img src="{% static 'imagenes/predecir2.JPG' %}" class="imgM"
+        style=" height: 25em;width: 30%; margin-left: 10%; margin-right: 10%;" />
+
+    <div style="background-color: aquamarine; ">
+        <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; padding-top: 2em;"> Resultado:</h1>
+        {% if resultado == 0 %}
+        <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; padding-bottom: 3em;">  El mosquito resulto ser un Aegypti, recuerda tomar precauciones y si te sientes mal acude a un medico</h2>
+        {% else %}
+        <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; padding-bottom: 3em;"> El mosquito resulto ser un Albopictus, recuerda aun asi tomar precauciones y si te sientes mal acude a un medico</h2>
+        {% endif %}
+    </div>
+</div>
+
+{% else %}
+<h1 style="background-color: aliceblue;"> no se seleciono correctamente la imagen</h1>
+{% endif %}
+
+
+
+
+
+
+{% endblock %}

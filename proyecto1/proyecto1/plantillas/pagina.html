@@ -1,0 +1,87 @@
+{% extends "principal.html" %}
+
+
+
+{% block content %}
+
+{% load static %}
+
+<p1> hola</p1>
+<div style="margin-left: 5%; margin-right: 5%; ">
+    <h2 
+        style="  text-align:center ; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color:aliceblue;">
+        Esta pagina emplea avanzada inteligencia artificial para analizar imagenes de mosquitos
+        e identificar si pertenece a alguno de los siguientes
+    </h2>
+</div>
+<div style="width: 100%; text-align: center; align-items: center; align-content: center;">
+
+    <table style=" width: 100%; margin-left: 0% ; align-items: center; text-align: center; align-items: center; ">
+        <thead>
+            <tr>
+                <th>
+                    <h1
+                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color:aliceblue;">
+                        aegypti</h1>
+                </th>
+                <th>
+                    <h1
+                        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color:aliceblue;">
+                        albopictus</h1>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="{% static 'imagenes/aegypti_16.JPG' %}" class="imgM" />
+                </td>
+                <td>
+                    <img src="{% static 'imagenes/albopictus_47.JPG' %}" class="imgM" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="{% static 'imagenes/aegypti_25.JPG' %}" class="imgM" />
+                </td>
+                <td>
+                    <img src="{% static 'imagenes/albopictus_1.JPG' %}" class="imgM" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="{% static 'imagenes/aegypti_38.JPG' %}" class="imgM" />
+                </td>
+                <td>
+                    <img src="{% static 'imagenes/albopictus_37.JPG' %}" class="imgM" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="margin-left: 20%; margin-right: 20%; margin-top: 5%;">
+        <h2 class="letra">
+            El mosquito Aedes aegypti y el Aedes albopictus son dos especies de mosquitos conocidas por transmitir
+            enfermedades infecciosas a los humanos, como el dengue, el zika, la fiebre amarilla y la chikungunya.
+
+        </h2>
+        <h2 class="letra">
+            El Aedes aegypti es conocido por su preferencia por habitats urbanos y es más comun en areas tropicales
+            y subtropicales. Es reconocible por sus marcas blancas en forma de lira en su cuerpo y patas.
+
+        </h2>
+        <h2 class="letra">
+            Por otro lado, el Aedes albopictus, tambien llamado mosquito tigre debido a sus rayas negras y blancas,
+            tiene una mayor resistencia a climas mas frios y es capaz de habitar areas suburbanas y rurales.
+
+        </h2>
+        <h2 class="letra">
+            Ambas especies se reproducen en agua estancada y tienen habitos diurnos, lo que significa que son mas
+            activos durante el dia, y son una preocupacion importante para la salud publica debido a su capacidad
+            para transmitir enfermedades graves a los humanos.
+        </h2>
+    </div>
+    <button type="button" class="boton" onclick="location.href='http://127.0.0.1:8000/subir/'"> Quiero probar</button>
+</div>
+
+{% endblock %}
+

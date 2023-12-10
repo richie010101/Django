@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Pagina de prueba</title>
+    <style>
+        .imgM {
+            border-color: rgb(253, 249, 16);
+            width: 30em;
+            height: 20em;
+            border-width: 0.25em;
+            border-style: solid;
+            border-radius: 0.5em;
+        }
+
+        .fondo {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .boton {
+            width: 30%;
+            margin-top: 1%;
+            border-radius: 1em;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: black;
+            background-color: rgb(176, 254, 254);
+            font-size: 40px;
+            height: 2em;
+
+
+        }
+
+        .boton:hover {
+            background-color: rgb(64, 136, 136);
+        }
+
+        #titulo:hover {
+            background-color: rgb(129, 129, 129);
+        }
+
+        .letra {
+            text-align: justify;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: aliceblue;
+        }
+    </style>
+
+    <script src="{% static 'codigo/mostrar.js' %}"></script>
+
+</head>
+
+<body style="background-color:rgb(231, 231, 231) ; margin: 0px; " background="{% static 'imagenes/fondo.JPG' %}">
+
+    <header style="    background-color: rgb(83, 81, 81);  ; margin-right: 0%; opacity: 0.9; ">
+        <div style="width: 100%; height: 6em; top: 0;">
+            <h1 onclick="location.href='http://127.0.0.1:8000/'" id="titulo"
+                style=" color: aliceblue; text-align:center; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 0; padding: 0.8em">
+                Identificando Dengue
+            </h1>
+        </div>
+    </header>
+
+
+    {% block content %}
+
+    {% endblock %}
+
+
+
+    <footer
+        style=" margin-top: 3em; width: 100%; height: 15em; background-color: rgb(83, 81, 81);  opacity: 0.8; text-align: center; align-items: center;   bottom: 0px;  ">
+        <h1
+            style=" color:rgb(231, 231, 231); text-align:center; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 0; padding: 0.8em">
+            Identificando Dengue
+        </h1>
+        <h3 style=" color:rgb(231, 231, 231); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> Pagina
+            desarrollada como proyecto para la materia de
+            Analisis De Grandes
+            Volumenes De Datos </h3>
+        <h3 style="color:rgb(231, 231, 231); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            Ricardo Jesus Reyes Munguia y Julio Alejandro Yescas Tinoco </h3>
+        <h3 style="color:rgb(231, 231, 231); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            Tecnologico de Morelia {{nombre}}</h3>
+
+    </footer>
+
+
+
+
+
+</body>
+
+</html>
