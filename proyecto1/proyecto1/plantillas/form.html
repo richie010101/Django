@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Entrenar Modelo</title>
+</head>
+<body>
+    <h2>Entrenar Modelo</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Entrenar Modelo</button>
+    </form>
+</body>
+</html>

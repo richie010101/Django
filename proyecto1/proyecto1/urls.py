@@ -16,18 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from proyecto1.views import saludo, fecha, calcula, subir, prediccion, grafica_csv, hola
+from proyecto1.views import saludo,  subir, prediccion, grafica_csv, hola, prediccionApi  #entrenar_modelo
 from django.contrib import admin
-from django.urls import  include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+  #  path('entrenarModelo/', entrenar_modelo),
     path('graficas/',grafica_csv),
-    path('api/', include('API.urls')),
     path('hola/', hola),
+     path('prediccionApi/', prediccionApi),
     path('',  saludo),
     path('subir/',subir) ,
     path('prediccion/',prediccion) ,
-    path('fecha/', fecha) ,
-    path('edad/<int:edad>/<int:ano>', calcula) ,
+
 ]

@@ -13,6 +13,65 @@ from django.http import HttpResponse
 import json
 import csv
 from django.http import HttpResponse, JsonResponse
+from rest_framework.decorators import api_view
+from django.views.decorators.csrf import csrf_exempt
+#from .forms import CarpetaImagenForm
+
+
+
+
+# def entrenar_modelo(request):
+#     if request.method == 'POST':
+#         form = CarpetaImagenForm(request.POST, request.FILES)
+#         if form.is_valid():
+#             # Obtener la carpeta de imágenes del formulario
+#             carpeta_imagenes = form.cleaned_data['carpeta_imagenes']
+
+#             # Ruta donde se guardará la carpeta temporalmente
+#             ruta_temporal = 'carpeta_temporal/'
+
+#             # Guardar las imágenes en la carpeta temporal
+#             ruta_temporal_completa = os.path.join(ruta_temporal, carpeta_imagenes.name)
+#             with open(ruta_temporal_completa, 'wb') as destino:
+#                 for parte in carpeta_imagenes.chunks():
+#                     destino.write(parte)
+
+#             # Lógica para cargar las imágenes y entrenar el modelo
+#             train_dataset = ...  # Configurar tu conjunto de datos
+
+#             model = Sequential([
+#                 # Definir la arquitectura del modelo
+#                 # ...
+
+#             ])
+
+#             model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+#             # Entrenar el modelo con el conjunto de datos
+#             history = model.fit(train_dataset, epochs=28, batch_size=550)
+
+#             # Guardar el modelo
+#             model.save("celulas.h5")
+
+#             # Actualizar el estado del sistema o guardar información sobre el entrenamiento en la base de datos
+
+#             # Redirigir a una página de éxito
+#             return HttpResponseRedirect('/entrenamiento-completo/')
+#     else:
+#         form = CarpetaImagenForm()
+
+#     return render(request, 'entrenar_modelo.html', {'form': form})
+
+@csrf_exempt
+@api_view(['POST'])
+def prediccionApi(request):
+    # Manejar los datos recibidos en la solicitud POST
+    data = request.data
+    # Realizar las operaciones necesarias con los datos recibidos
+    # Devolver una respuesta apropiada, por ejemplo:
+    return JsonResponse({'message': 'Datos recibidos correctamente'})
+
+
 
 def hola(request):
     return JsonResponse({'message': 'Hello, world!'})
