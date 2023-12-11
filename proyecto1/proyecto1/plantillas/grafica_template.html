@@ -1,0 +1,27 @@
+{% extends "principal.html" %}
+
+{% block content %}
+
+{% load static %}
+
+
+<h1>Gráfico desde archivo CSV</h1>
+<img src="{% static 'imagenes/grafica.png' %}" alt="Gráfico">
+
+<div style="background-color: antiquewhite;">
+<h2>Resumen del Modelo</h2>
+    <pre>{{ model_summary|safe }}</pre>
+
+
+<h1>Información del Conjunto de Datos</h1>
+    <pre>{{ dataset_info|safe }}</pre>
+</div>
+
+
+
+    
+    
+
+    
+
+{% endblock %}
