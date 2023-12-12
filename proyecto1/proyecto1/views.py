@@ -123,7 +123,7 @@ def grafica_csv(request):
     return render(request, 'grafica_template.html', {'img_path': img_path, 'model_summary': model_summary,'dataset_info': dataset_info})
 
 def hacerPrediccion():
-    new_model = keras.models.load_model('C:/Users/ricar/Downloads/Practica5/ModeloFinal.h5')
+    new_model = keras.models.load_model('C:/Users/ricar/Downloads/Practica5/celulas.h5py')
     print("modeloCargado")
     filename='C:/Users/ricar/Desktop/Django/proyecto1/proyecto1/static/imagenes/predecir2.jpg'
 
@@ -155,6 +155,7 @@ def prediccion(request):
 
         resultado=0
         resultado=hacerPrediccion()
+        print(resultado)
         
         
         
@@ -175,9 +176,9 @@ def subir(request):
 
 
 def saludo(request): # primera vista
-    nombre="juan"
+    #nombre="juan"
 
-    return render(request, "pagina.html",{"nombre":nombre})
+    return render(request, "pagina.html",)
 
 
 

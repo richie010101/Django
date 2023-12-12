@@ -17,8 +17,11 @@
         <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; padding-top: 2em;"> Resultado:</h1>
         {% if resultado == 0 %}
         <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; padding-bottom: 3em;">  El mosquito resulto ser un Aegypti, recuerda tomar precauciones y si te sientes mal acude a un medico</h2>
-        {% else %}
+        {% elif resultado == 1 %}
         <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; padding-bottom: 3em;"> El mosquito resulto ser un Albopictus, recuerda aun asi tomar precauciones y si te sientes mal acude a un medico</h2>
+        {% else %}
+        <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; padding-bottom: 3em;"> El mosquito no pertenece a ningun tipo de mosquito</h2>
+        
         {% endif %}
     </div>
 </div>
